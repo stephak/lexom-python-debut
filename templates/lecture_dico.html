@@ -1,0 +1,11 @@
+{% extends "templateBS.html" %}
+{% block content %}
+
+<h1>lecture d'un dico</h1>
+<dl>
+  {% for key, value in monDico.items() %}
+      <dt>{{ key }}  {{ value }}</dt>
+  {% endfor %}
+</dl>
+
+{% endblock %}

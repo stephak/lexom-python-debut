@@ -1,0 +1,15 @@
+<html>
+<head>
+  <style type="text/css">
+    body { background-color: blue; }
+    h1 {  color: red; padding: 14px;}
+    h2 {  color:greenyellow; padding: 12px;}
+ </style>
+  <title>Mes supers utilitaires pour Arkea</title></head>
+<body>
+  <h1>Mon super site Arkea (titre principal)</h1>
+  <p><h2>on est dans layout avant le block content</h2> </p>
+  {% block content %}{% endblock %}
+  <p><h2>on est dans layout après le block content</h2></p>
+  <footer>(c) Arkea Dream Team/footer  </footer>
+</body></html>
