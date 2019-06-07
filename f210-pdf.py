@@ -1,5 +1,5 @@
 from fpdf import FPDF
-import getlog
+import f214_getlog as getlog
 import datetime
 
 
@@ -8,7 +8,7 @@ today=datetime.datetime.now().strftime("%Y%m%d") #pour avoir un string obtenu à
 class PDF(FPDF):    
     def header(self):         #parametrage du header
         # Logo
-        self.image('arkea-logo.png', 10, 8, 33)
+        self.image('alteca_logo.png', 10, 8, 33)
         # Arial bold 15
         self.set_font('Arial', 'B', 15)
         # Move to the right

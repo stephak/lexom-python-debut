@@ -3,7 +3,7 @@ import os
 import csv
 import datetime
 
-path = "/Users/stephanehak.ni/dev/lexom-python-lille"
+path = os.curdir
 file = "squidAnonymise.log"
 db = "squidAnonymise.db"
 path_file = path + os.sep + file
@@ -76,7 +76,7 @@ sql_table_request = "create table REQUESTS (" \
 
 
 def create_db(path=path, file=file):
-    path_file = path + os.path + file  # chemin absolu du fichier
+    path_file = path + os.sep + file  # chemin absolu du fichier
     # On crée la base
     db = file.split(('.'))[0] + '.db'  # le nom de la base de données est le même que le nom du fichier
     path_db = path + os.path.sep + db
@@ -89,6 +89,7 @@ def create_db(path=path, file=file):
 
     conn = sqlite3.connect(path_db)
     c = conn.cursor()
+    print("Création de la table REQUEST")
     c.execute(sql_table_request)
 
     nombre_de_colonnes = set({})  # On va parcourir le fichier texte, on va vérifier
@@ -96,7 +97,7 @@ def create_db(path=path, file=file):
     # C'est un petit test de data qaulity. ON va parcourir le
     # fichier et pour chaque ligne mettre le nombre de colonne obtenues
     # dans un ensemble (set) qui ne peut contenir que des valeurs uniques.
-
+    print("Remplissage de la table REQUEST")
     fh = open(path_file)
     reader = csv.reader(fh)
     nb_lignes_max = 100000
@@ -126,8 +127,8 @@ def create_db(path=path, file=file):
 
     conn.commit()
     conn.close()
-    print("Nombre de colonnes : ",
-          nombre_de_colonnes)  # on voir au passage la facilité du truc, on imprime un tableau là
+    print("Nombre de format(s) de lignes (un format = un nombre de colonnes) sur le fichier: ",
+          len(nombre_de_colonnes))  # on voir au passage la facilité du truc, on imprime un tableau là
 
 
 def get_weird_queries(path, db, nb_lignes):
