@@ -148,7 +148,7 @@ def get_weird_queries(path, db, nb_lignes):
     c.execute(sql_tmp)
     while (1):
         row = c.fetchone()  # on parcours le select ligne par ligne
-        if row == None or nb_lignes_lues >= nb_lignes_a_voir:
+        if row == None or nb_lignes_lues >= nb_lignes:
             break
         l.append(row)
 

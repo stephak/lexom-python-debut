@@ -1,5 +1,5 @@
 from flask import Flask
-import getlog
+import f29_5_queries as getlog
 import datetime
 
 app=Flask(__name__)
@@ -19,7 +19,6 @@ def get_log():
 
 @app.errorhandler(404)
 def page_not_found(error):
-    #return render_template('page_not_found.html'), 404
     return '<h2>la page n existe pas <h2>'
 
 if __name__=='__main__':

@@ -14,7 +14,7 @@ def index():
 def get_log2():
     date_squid=str(datetime.datetime.now().strftime('%y-%m-%d'))
     contenu_html = str(getlog.get_weird_queries('.', "squidAnonymise.db", 10))
-    return render_template('log.html',date_squid=date_squid,contenu_html=contenu_html)
+    return render_template('f214_log.html',date_squid=date_squid,contenu_html=contenu_html)
 
 
 @app.route('/getlog3/')
