@@ -1,0 +1,11 @@
+<!--f214_magasins.htlm-->
+{% extends "f214_layout.html" %}
+{% block content %}
+
+<h1>lecture de la table magasins</h1>
+<ul id="magasins" class="magasins">
+    {% for mag in magasins %}
+        <a href="{{ url_for('disp_magasin',mag=mag.ville,id_magasin=mag.id_magasin) }}">{{mag.ville}}</a><br>
+    {% endfor %}
+</ul>
+{% endblock %}

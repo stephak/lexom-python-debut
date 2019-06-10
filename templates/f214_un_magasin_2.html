@@ -1,0 +1,19 @@
+<!--f214_un_magasin.htlm-->
+{% extends "f214_layout.html" %}
+{% block content %}
+
+<h1>lecture d'un magasin:{{mag_ville}}</h1>
+<ul id="magasins" class="magasins"></ul>
+<form action="/f214_un_magasin.html" method="get">
+    <div>
+      <label for="name">Ville:</label> <input type="text" id="ville" name="ville">
+    </div>
+    <div>
+      <label for="mail">Adresse:</label> <input type="text" id="adresse" name="adresse">
+    </div>
+
+    <div class="button">
+      <button type="submit">Mettre à jour</button>
+    </div>
+</form>
+{% endblock %}
