@@ -49,10 +49,10 @@ class Transactions(db.Model):
      def __repr__(self):
         return '<Transaction %r>' % self.id_transaction
 
+
 @app.route('/magasin/<mag>')
 def disp_magasin(mag):
     id_magasin = request.args.get('id_magasin', None)
-    print(id_magasin)
     mag=Magasins.query.filter(Magasins.id_magasin==id_magasin).first()
     return render_template('f214_un_magasin.html',mag_ville=mag.ville, mag_adresse=mag.adresse, mag_id=mag.id_magasin)
 

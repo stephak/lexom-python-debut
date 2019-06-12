@@ -21,19 +21,19 @@ def get_log2():
 def get_log3():
     date_squid=str(datetime.datetime.now().strftime('%y-%m-%d'))
     contenu = getlog.get_weird_queries('.', "squidAnonymise.db", 10)
-    return render_template('lecture_liste.html',date_squid=date_squid,maListe=contenu)
+    return render_template('f214_lecture_liste.html',date_squid=date_squid,maListe=contenu)
 
 @app.route('/getlog4/')
 def get_log4():
     date_squid=str(datetime.datetime.now().strftime('%y-%m-%d'))
     contenu = getlog.get_weird_queries('.', "squidAnonymise.db", 10)
-    return render_template('lecture_liste_extend.html',date_squid=date_squid,maListe=contenu)
+    return render_template('f214_lecture_liste_extend.html',date_squid=date_squid,maListe=contenu)
 
 
 
 @app.errorhandler(404)
 def page_not_found(error):
-    return render_template('page_not_found.html'), 404
+    return render_template('f214_page_not_found.html'), 404
 
 
 if __name__=='__main__':

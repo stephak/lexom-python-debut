@@ -9,7 +9,6 @@ def index():
     return '<h1>Hello World <h1>'
 
 
-
 @app.route('/getlog/')
 def get_log():
     date=str(datetime.datetime.now().strftime('%y-%m-%d'))

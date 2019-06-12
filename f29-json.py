@@ -3,6 +3,9 @@
 import json
 import requests #il faut l'installer avant
 
+
+a=[1,2,3,4,5]
+
 response = requests.get("https://jsonplaceholder.typicode.com/todos")
 todos = json.loads(response.text) #todos est une liste
 

@@ -1,8 +1,8 @@
-#f214_formualaire_2.py
+#f214_formulaire_2.py
 from flask import Flask, redirect, url_for, request
 from flask import render_template
-app = Flask(__name__)
 
+app = Flask(__name__)
 
 
 
