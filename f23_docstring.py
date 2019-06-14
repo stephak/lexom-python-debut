@@ -7,8 +7,6 @@
 
 from math import sqrt 
 
-print("salut")
-
 def pythagore():
     """
         Fonction qui,  à la base d'un nombre entier proposé par l'utilisateur,
