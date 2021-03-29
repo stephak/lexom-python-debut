@@ -63,7 +63,7 @@ public==2019.4.13
 py==1.7.0
 pycodestyle==2.4.0
 pygame==1.9.4
-Pygments==2.2.0
+Pygments==2.7.4
 pylint==2.2.2
 pyparsing==2.3.0
 pyperclip==1.7.0
